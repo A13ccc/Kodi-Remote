@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kodi Remote</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="remote">
+        <div class="top-bar">
+            <button class="control" id="back">
+                <img src="{{ url_for('static', filename='imgs/back.png') }}" alt="Back" />
+            </button>
+            <button class="power-button">⏻</button>
+        </div>
+        <div class="touch-surface">
+            <div class="directional-controls">
+                <button class="control" id="up">
+                    <img src="{{ url_for('static', filename='imgs/up.png') }}" alt="Up" />
+                </button>
+                <div class="horizontal-controls">
+                    <button class="control" id="left">
+                        <img src="{{ url_for('static', filename='imgs/left.png') }}" alt="Left" />
+                    </button>
+                    <button class="control menu-button" id="select">OK</button>
+                    <button class="control" id="right">
+                        <img src="{{ url_for('static', filename='imgs/right.png') }}" alt="Right" />
+                    </button>
+                </div>
+                <button class="control" id="down">
+                    <img src="{{ url_for('static', filename='imgs/down.png') }}" alt="Down" />
+                </button>
+            </div>
+        </div>
+        <div class="bottom-controls">
+            <button class="control" id="rewind">
+                <img src="{{ url_for('static', filename='imgs/rewind.png') }}" alt="Rewind" />
+            </button>
+            <button class="control" id="play-pause">
+                <img src="{{ url_for('static', filename='imgs/play_pause.png') }}" alt="Play/Pause" />
+            </button>
+            <button class="control" id="fast-forward">
+                <img src="{{ url_for('static', filename='imgs/fast_forward.png') }}" alt="Fast Forward" />
+            </button>
+        </div>
+        <div class="volume-controls">
+            <button class="control" id="volume-down">
+                <img src="{{ url_for('static', filename='imgs/volume_down.png') }}" alt="Volume Down" />
+            </button>
+            <button class="control" id="volume-up">
+                <img src="{{ url_for('static', filename='imgs/volume_up.png') }}" alt="Volume Up" />
+            </button>
+        </div>
+        <button class="control menu-button" id="context-menu">☰</button>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
