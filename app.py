@@ -3,7 +3,7 @@ import requests
 
 app = Flask(__name__)
 
-KODI_URL = 'http://192.168.12.192:8080'
+KODI_URL = 'http://192.168.12.248:8080'
 KODI_USERNAME = 'alec'
 KODI_PASSWORD = '2532'
 
