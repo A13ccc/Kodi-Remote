@@ -76,6 +76,11 @@ def input_back():
     send_kodi_command('Input.ExecuteAction', {'action': 'back'})
     return jsonify(success=True)
 
+@app.route('/input/home')
+def input_home():
+    send_kodi_command('Input.ExecuteAction', {'action': 'home'})
+    return jsonify(success=True)
+
 @app.route('/input/volume_up')
 def volume_up():
     send_kodi_command('Input.ExecuteAction', {'action': 'volumeup'})

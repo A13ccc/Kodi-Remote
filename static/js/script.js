@@ -77,6 +77,13 @@ document.getElementById('back').addEventListener('click', function() {
         .then(data => console.log(data));
 });
 
+document.getElementById('home').addEventListener('click', function() {
+    vibrateOnPress();
+    fetch('/input/home')
+        .then(response => response.json())
+        .then(data => console.log(data));
+});
+
 document.getElementById('volume-up').addEventListener('click', function() {
     vibrateOnPress();
     fetch('/input/volume_up')
