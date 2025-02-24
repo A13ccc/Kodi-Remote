@@ -25,15 +25,14 @@ html, body {
     display: flex;
     justify-content: space-between; /* Changed to space-between to properly space home and back buttons */
     align-items: center;
-    padding: 10px 0;
 }
 
 #home {
     background: transparent;
     border: none;
-    padding: 10px;
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
+    margin-left: -40px;
 }
 
 #home img {
@@ -45,37 +44,19 @@ html, body {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-#keyboard-button {
-    background: transparent;
-    background-color: transparent;
-    display: flex;
-    justify-content: center;
-    border: none;
-    padding: 10px;
-    width: 50px;
-    height: 50px;
-    margin-top: 2%;
-    margin-right: 60%;
-}
-
-#keyboard-button img {
-    background: transparent;
-    width: 100%;
-    height: 100%;
-}
-
-#keyboard-button:active {
-    /* Ensure no visibility or display changes */
-    background-color: rgba(255, 255, 255, 0.1); /* Optional: Add a slight background color on press */
-    ;  
-}
-
 #text-input {
     background-color: transparent;
     color: white;
     outline-color: transparent;
-    height: 40px;
+    height: 20px;
 }
+
+#back {
+    background: transparent;
+    border: none;
+    margin-right: -40px;
+}
+
 
 .power-button {
     background: transparent;
