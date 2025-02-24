@@ -4,6 +4,32 @@ function vibrateOnPress() {
     }
 }
 
+function sendText() {
+    const text = document.getElementById('text-input').value;
+    if (text.trim() === '') {
+        console.error('No text provided');
+        return;
+    }
+    fetch('/send_text', {
+        method: 'POST',
+        headers: {
+        'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ text: text }),
+    })
+        .then(response => response.json())
+        .then(data => {
+        if (data.error) {
+            console.error('Error:', data.error);
+        } else {
+            console.log('Success:', data);
+        }
+        })
+        .catch(error => {
+        console.error('Error:', error);
+        });
+}
+
 document.getElementById('up').addEventListener('click', function() {
     vibrateOnPress();
     fetch('/input/up')
@@ -143,6 +169,8 @@ document.getElementById('keyboard-button').addEventListener('click', function() 
         textInput.style.display = 'none';
     }
 });
+
+
 
 document.getElementById('stop').addEventListener('click', function() {
     vibrateOnPress();

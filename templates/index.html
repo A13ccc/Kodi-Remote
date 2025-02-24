@@ -17,7 +17,7 @@
             <button class="control" id="home">
                 <img src="{{ url_for('static', filename='imgs/home.png') }}" alt="Home" />
             </button>
-            <input type="text" id="text-input" placeholder="Enter text here" />
+            <input type="text" id="text-input" placeholder="Enter text here" onkeydown="if(event.key === 'Enter') { event.preventDefault(); sendText(); }" />
             <button class="control" id="back">
                 <img src="{{ url_for('static', filename='imgs/back.png') }}" alt="Back" />
             </button>

@@ -21,7 +21,8 @@ def send_kodi_command(method, params=[]):
 
 @app.route('/send_text', methods=['POST'])
 def send_text():
-    text = request.form.get('text')
+    data = request.get_json()
+    text = data.get('text')
     if text:
         result = send_kodi_command('Input.SendText', {'text': text, 'done': True})
         return jsonify(result)
@@ -78,7 +79,7 @@ def input_back():
 
 @app.route('/input/home')
 def input_home():
-    send_kodi_command('Input.ExecuteAction', {'action': 'home'})
+    send_kodi_command('Input.Home')
     return jsonify(success=True)
 
 @app.route('/input/volume_up')
