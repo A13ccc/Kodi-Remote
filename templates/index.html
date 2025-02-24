@@ -14,6 +14,7 @@
 <body>
     <div class="remote">
         <div class="top-bar">
+            <input type="text" id="text-input" placeholder="Enter text here" />
             <button class="control" id="back">
                 <img src="{{ url_for('static', filename='imgs/back.png') }}" alt="Back" />
             </button>
@@ -52,11 +53,13 @@
             <button class="control" id="volume-down">
                 <img src="{{ url_for('static', filename='imgs/volume_down.png') }}" alt="Volume Down" />
             </button>
+            <button class="control menu-button" id="context-menu">☰</button>
             <button class="control" id="volume-up">
                 <img src="{{ url_for('static', filename='imgs/volume_up.png') }}" alt="Volume Up" />
             </button>
         </div>
-        <button class="control menu-button" id="context-menu">☰</button>
+        <button class="control info-button" id="info-menu">i</button>
+        
     </div>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
